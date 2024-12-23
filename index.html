@@ -834,24 +834,18 @@
 	</body>
 
 	<script>
-		const audio = document.getElementById('welcome-sound');
-        let played = false; // کنترل پخش تنها یک‌بار
+		const pageLoadAudio = document.getElementById('welcome-sound');
+        	const buttonClickAudio = document.getElementById('sound-file');
+        	
 
         // رویداد بارگذاری صفحه
         window.addEventListener('load', () => {
-            if (!played) {
-                audio.play().catch(error => console.error('Error playing audio:', error));
-                played = true; // جلوگیری از پخش مجدد
-            }
+            pageLoadAudio.play().catch(error => console.error('Error playing page load audio:', error));
         });
-		
-		window.addEventListener('load', () => {
-            const audio = document.getElementById('sound-file');
-            // صدا را فعال می‌کنیم
-            audio.muted = false;
-            audio.play().catch(error => {
-                console.error('Autoplay not allowed:', error);
-            });
+
+        // رویداد کلیک دکمه
+        playButton.addEventListener('click', () => {
+            buttonClickAudio.play().catch(error => console.error('Error playing button click audio:', error));
         });
 		let movedUp = false;
 let currentFloor = 0;
