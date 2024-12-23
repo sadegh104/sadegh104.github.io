@@ -834,18 +834,17 @@
 	</body>
 
 	<script>
-		const pageLoadAudio = document.getElementById('welcome-sound');
-        	const buttonClickAudio = document.getElementById('sound-file');
-        	
 
         // رویداد بارگذاری صفحه
         window.addEventListener('load', () => {
-            pageLoadAudio.play().catch(error => console.error('Error playing page load audio:', error));
+            const pageLoadAudio = document.getElementById('welcome-sound');
+	    pageLoadAudio.play();
         });
 
         // رویداد کلیک دکمه
-        playButton.addEventListener('click', () => {
-            buttonClickAudio.play().catch(error => console.error('Error playing button click audio:', error));
+        document.getElementById('start-button').addEventListener('click', () => {
+            const buttonClickAudio = document.getElementById('sound-file');
+	    buttonClickAudio.play();
         });
 		let movedUp = false;
 let currentFloor = 0;
