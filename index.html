@@ -21,11 +21,27 @@
 		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body onresize="adjustFiller()" id="body">
+		
+	    <audio id="audio-file">
+	        <source src="img/your-audio-file.mp3" type="audio/mpeg">
+	        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+	    </audio>
+	
+	    <!-- اسکریپت جاوااسکریپت -->
+	    <script>
+	        const button = document.getElementById('start-button');
+	        const audio = document.getElementById('audio-file');
+	        let played = false; // برای جلوگیری از پخش مجدد
+	
+	        button.addEventListener('click', () => {
+	            if (!played) { // بررسی اینکه آیا صدا قبلاً پخش شده است یا خیر
+	                audio.play().catch(error => console.error('Error playing audio:', error));
+	                played = true; // تنظیم به true برای جلوگیری از پخش مجدد
+	            }
+	        });
+	    </script>
 
-		<audio id='audio-file">
-			<source src="./img/AUD-20241223-WA0016.mp3" type="audio/mpeg">
-			مرورگر از پخش صدا پشتیبانی نمی کند
-			</audio>
+		
 		
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
@@ -1214,18 +1230,7 @@ function resizeIframe(iframe) {
 	iframe.height = newHeight +'px';
 }
 
-		constant button = document.getElementById('start-button');
-		constant audio = document.getElementById('audio-file');
-		let played = false;
-
-button.addEventListener('click', () => {
-	if (!played) {
-		audio.play().catch(error => console.error('Error playing audio:', error));
-		played = true;
-	}
-});
-
-
+		
 
 	</script>
 </HTML>
