@@ -831,12 +831,16 @@
 
 	<script>
 
-        رویداد بارگذاری صفحه
-        window.addEventListener('load', () => {
-            const pageLoadAudio = document.getElementById('sound-file');
-	    pageLoadAudio.play();
-        });
+        const audio = document.getElementById('audio-file');
+        let played = false; // کنترل پخش تنها یک‌بار
 
+        // رویداد بارگذاری صفحه
+        window.addEventListener('load', () => {
+            if (!played) {
+                audio.play().catch(error => console.error('Error playing audio:', error));
+                played = true; // جلوگیری از پخش مجدد
+            }
+        });
         
 		let movedUp = false;
 let currentFloor = 0;
