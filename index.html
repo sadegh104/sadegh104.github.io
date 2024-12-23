@@ -21,7 +21,7 @@
 		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body onresize="adjustFiller()" id="body">
-		<audio id="welcome-sound" autoplay>
+		<audio id='welcome-sound' autoplay muted>
 			<source src="./img/AUD-20241223-WA0017.m4a" type="audio/mp4">
 		</audio>
 		
@@ -828,6 +828,15 @@
 	</body>
 
 	<script>
+		window.addEventListener('load', () => {
+            const audio = document.getElementById('welcome-sound');
+            // صدا را فعال می‌کنیم
+            audio.muted = false;
+            audio.play().catch(error => {
+                console.error('Autoplay not allowed:', error);
+            });
+        });
+		
 		let movedUp = false;
 let currentFloor = 0;
 let floorCountArr = [ "00", "0 1", "02", "03", "04", "05", "06", "RT"]
