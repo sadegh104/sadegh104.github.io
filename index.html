@@ -22,8 +22,18 @@
 	</head>
 	<body onresize="adjustFiller()" id="body">
 		<audio id='welcome-sound' autoplay>
-			<source src="img/AUD-20241223-WA0017.m4a" type="audio/mp4">
+			<source src="img/AUD-20241223-WA0017.m4a" type="audio/mp4"> Your browser does not support the audio element
 		</audio>
+
+		<script>
+			window.addEventListener('load', () => {
+            const audio = document.getElementById('welcome-sound');
+            // صدا را فعال می‌کنیم
+            audio.play().catch(error => {
+                console.error('Autoplay failed:', error);
+            });
+        });
+		</script>
 		
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
@@ -828,14 +838,6 @@
 	</body>
 
 	<script>
-		window.addEventListener('load', () => {
-            const audio = document.getElementById('welcome-sound');
-            // صدا را فعال می‌کنیم
-            audio.muted = false;
-            audio.play().catch(error => {
-                console.error('Autoplay not allowed:', error);
-            });
-        });
 		
 		let movedUp = false;
 let currentFloor = 0;
