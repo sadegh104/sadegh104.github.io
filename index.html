@@ -1,0 +1,1214 @@
+<!DOCTYPE html>
+<HTML>
+	<head>
+		<meta charset="utf-8">
+	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+	    <meta name="viewport" content="width=device-width, initial-scale=1">
+	    <title>گروه صنعتی آسانسور و پله برقی بهران</title>
+	    <link rel="shortcut icon" href="./img/logo_small.ico" type="image/x-icon">
+
+	    
+	    <meta name="twitter:image" content="./img/preview.webp">
+	    <meta property="og:image" content="./img/preview.webp">
+	    <meta property="og:title" content="Sellift - Lifting up your business">
+
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+
+		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
+
+		<link rel="stylesheet" href="./css/styles.css">
+	</head>
+	<body onresize="adjustFiller()" id="body">
+		
+		<!-- Header -->
+		<div class="row lift-scene-up justify-content-center">	
+			<div class="floor-screen col-lg-2 col-md-4 col-4 col-sm-4 mx-auto">
+				<div id="floor-rectangle">
+					<div id="floor-screen-container">
+						<center>
+						    <div id="floor-screen-background">
+								88
+							</div>
+							<span class="current-floor" id="floor-counter">
+								00
+							</span>
+						</center>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		
+		<div class="pc-row d-none d-sm-none d-md-none d-lg-block d-xl-block">
+			<div class="start-button-div animate__animated animate__pulse animate__infinite	infinite animate__delay-2s" id = "start-button-div">
+				<div class="start-button " id = "start-button" onclick="init_lift();">
+					<img src="./img/behran.png" alt="Behran Logo" class="f0-logo-img" >
+				</div>	
+			</div>
+		</div>
+
+		<div class="mobile-row d-sm-block d-md-block d-lg-none d-xl-none">
+			<div class="start-button-div animate__animated animate__pulse animate__infinite	infinite animate__delay-2s" id = "start-button-div-mobile">
+				<div class="start-button" id = "start-button" onclick="init_lift();">
+					<img src="./img/behran.png" alt="Behran Logo" class="f0-logo-img" >
+				</div>	
+			</div>
+		</div>
+		
+		<div class="door" id="start-left-door">
+			<div class="row h-100">
+			</div>
+		</div>
+
+		<div class="door" id="start-right-door">
+			<div class="row h-100">
+			</div>
+		</div>
+
+
+
+
+		<div class="door" id="left-door">
+			<div class="row h-100">
+				<div class="col-7 col-sm-7 col-md-7 col-lg-7 my-auto"></div>
+				<div class="col-5 col-sm-5 col-md-5 col-lg-5 my-auto">
+					<img class = "img-100 lazyload" data-src="./img/logo 1.png">
+				</div>
+			</div>
+		</div>
+
+		<div class="door" id="right-door">
+			<div class="row h-100">
+				<div class="col-6 col-sm-6 col-md-6 col-lg-6 my-auto">
+					<img class = "img-100 lazyload" data-src="./img/logo 2.png">
+				</div>
+				<div class="col-6 col-sm-6 col-md-6 col-lg-6 my-auto">
+				</div>
+			</div>
+		</div>
+
+		<div class="row hidden" id = "floor-7">
+			<div class="container">
+				<div class="row pc h-100">
+
+
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+
+					<div class="col-10 col-sm-10 col-md-10 col-lg-10 f7-slogan" style='text-align: center'>گروه کارخانجات صنعتی آسانسور و پله برقی بهران</div>
+					
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		
+
+		<!-- Lamps Block -->
+		<div class="lamps-block align-middle" id="lamps-block">
+			<div class="container pc-row  d-none d-sm-none d-md-none d-lg-block d-xl-block">
+				<div class="row">
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-4 col-sm-4 col-md-4 col-lg-4 my-auto">
+						<img class = "img-100 align-middle lazyload" data-src="./img/lamp.webp">
+					</div>
+					<div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+					<div class="col-4 col-sm-4 col-md-4 col-lg-4 my-auto">
+						<img class = "img-100 lazyload" data-src="./img/lamp.webp">
+					</div>
+					
+				</div>
+			</div>
+
+			<div class="container mobile-row d-sm-block d-md-block d-lg-none d-xl-none">
+				<div class="row ">
+					<div class="col-3 col-sm-3 col-md-3 col-lg-3"></div>
+					<div class="col-6 col-sm-6 col-md-6 col-lg-6 my-auto">
+						<img class = "img-100 align-middle lazyload" data-src="./img/lamp_mobile.webp">
+					</div>
+					<div class="col-3 col-sm-3 col-md-3 col-lg-3"></div>
+				</div>
+			</div>
+			
+		</div>
+		
+
+		
+
+
+		<div class="row main-block" id = "main-block">
+			<div class="container">
+
+				<div class = "row h-100 pc hidden" id="floor-0">
+
+					<div class="d-none d-md-block d-lg-block d-xl-block col-md-1 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-5 col-lg-5 f3-header">
+						<div class="header" style='text-align:center; font-size:28px !important'>
+							گروه صنعتی آسانسور و پله برقی بهران 
+						</div>
+						<div class="f3-regular-text mt-5 mb-4" style='text-align:center; font-size:24px !important'>
+							<b>بزرگترین تولید کننده قطعات آسانسور و پله برقی در خاورمیانه</b>
+						</div>
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-5 col-lg-3 f3-feedback-img-div">
+						<div class="f3-feedback-img">
+
+							<video loop="" muted="" autoplay="" playsinline="" -webkit-playsinline="">
+
+							    <source src="./img/1111.mp4" type='video/mp4'/>
+							    
+						  	</video>
+							
+						</div>
+						
+					</div>
+					<div class="col-lg-1 col-md-1 col-1 col-sm-1"></div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img src="./img/arrow.webp" alt="" class="arrow-down img-100" >
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "row h-100 pc hidden" id="floor-1">
+					<div class="col-1 col-sm-1 col-md-2 col-lg-1"></div>
+					<div class="col-11 col-sm-12 col-md-9 col-lg-11 header mt-6 mb-4" style='text-align:center; font-size:36px !important'>محصولات</div>
+					<div class="col-12 col-sm-12 col-md-2 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-3">
+						<div class="f2-module-card container  f2-module-container">
+							<div class="row align-items-end">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-7 col-sm-7 col-md-8 col-lg-7">
+									<div class="f2-module-number" style='text-align:center; font-size:24px !important'>انواع پکیج های آسانسور</div>
+
+								</div>
+								<div class="col-2 col-sm-2 col-md-2 col-lg-3">
+									<div class="f2-open-button"  id="b-1" onclick="open_description(1);">
+										<img data-src="./img/f2-arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-10 col-1 col-sm-10 col-md-10 col-lg-10">
+									<div class="f2-module-description hidden" id="desc-m1">
+										<hr/>
+										<b style='text-align:center; font-size:18px !important'>
+											انواع پکیج های آسانسور با موتورخانه، بدون موتورخانه و هیدرولیک برای فرودگاه ها، ایستگاه های مترو، مراکز اداری و تجاری، بیمارستان ها و ساختمان های مسکونی
+										</b>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="f2-module-card container  f2-module-container">
+							<div class="row align-items-end">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-7 col-sm-7 col-md-8 col-lg-7">
+									<div class="f2-module-number" style='text-align:center; font-size:24px !important'>انواع پکیج های پله برقی و شیبراه</div>
+
+								</div>
+								<div class="col-2 col-sm-2 col-md-2 col-lg-3">
+									<div class="f2-open-button"  id="b-2" onclick="open_description(2);">
+										<img data-src="./img/f2-arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-10 col-1 col-sm-10 col-md-10 col-lg-10">
+									<div class="f2-module-description hidden" id="desc-m2">
+										<hr/>
+										<b style='text-align:center; font-size:18px !important'>
+											انواع پکیج های پله برقی و شیبراه برای مراکز ترافیک بالا چون فرودگاه ها، ایستگاه های مترو، مراکز اداری و تجاری در مدل های تجاری، سخت کار و فوق سخت کار
+										</b>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="f2-module-card container  f2-module-container">
+							<div class="row align-items-end">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-7 col-sm-7 col-md-8 col-lg-7">
+									<div class="f2-module-number" style='text-align:center; font-size:24px !important'>انواع قطعات آسانسور و پله برقی</div>
+
+								</div>
+								<div class="col-2 col-sm-2 col-md-2 col-lg-3">
+									<div class="f2-open-button"  id="b-3" onclick="open_description(3);">
+										<img data-src="./img/f2-arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+									</div>
+								</div>
+
+							</div>
+							<div class="row">
+								<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+								<div class="col-10 col-1 col-sm-10 col-md-10 col-lg-10">
+									<div class="f2-module-description hidden" id="desc-m3">
+										<hr/>
+										<b style='text-align:center; font-size:18px !important'>
+											انواع قطعات آسانسور مانند موتورگیربکس، موتور گیرلس، درب های اتوماتیک، نیمه اتوماتیک و لولایی، گاورنر، قلاب سیم بکسل و همچنین پله برقی و شیبراه
+										</b>
+									</div>
+								</div>
+							</div>
+						</div>
+
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-2 d-lg-none"></div>
+					<div class="col-12 col-sm-12 col-md-2 d-lg-none"></div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-3">
+	
+					</div>
+
+					<div class="col-12 col-sm-12 col-md-2 d-lg-none"></div>
+					<div class="col-12 col-sm-12 col-md-2 d-lg-none"></div>
+					<div class="col-12 col-sm-12 col-md-8 col-lg-3">
+
+					</div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+
+				
+
+				<div class = "row h-100 pc hidden" id="floor-2">
+
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-10 col-lg-11 header mt-6 mb-4" style='text-align:center; font-size: 28px !important'> 
+						انواع پله برقی های تولید بهران
+					</div>
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-1 col-sm-1 col-md-1 d-lg-none d-xl-none"></div>
+
+					<div class="col-12 col-sm-12 col-md-10 col-lg-9 f6-about" style='text-align:center; font-size: 24px !important'> 
+						<b>پله برقی های بهران در ارتفاع و طرح های مختلف تولید می گردند. در این محصولات آخرین فناوری ها در صنعت پله برقی لحاظ شده است</b><br><br><b>از پله برقی ها و شیبراه های بهران می توان در دو حالت معمولی و پرترافیک در پروژه های فضای باز، فضای سرپوشیده و نیمه سرپوشیده استفاده نمود</b>
+					</div>
+					<div class="col-2 col-sm-2 col-md-1 col-lg-2"></div>
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-10 col-lg-9">
+						<div class="f6-offer-card f6-oc-1 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										پله برقی تجاری
+									</div><br>
+									<div class="f3-feedback-img">
+
+							<video loop="" muted="" autoplay="" playsinline="" -webkit-playsinline="">
+
+							    <source src="./img/456.mp4" type='video/mp4'/>
+							    
+						  	</video>
+							
+						</div>
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-card-header-right">
+										:موارد استفاده
+									</div>
+									<div class="f6-desription">
+										<br><b style='font-size:24px !important'>
+										مجتمع های تجاری و اداری، سینماها، هتل ها 
+										</b><br>
+										<br>
+									</div>
+									<div class="f6-button" style='font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+
+						<div class="f6-offer-card f6-oc-2 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										پله برقی های سخت کار و فوق سخت کار
+									</div><br>
+									<div class="f3-feedback-img">
+
+							<video loop="" muted="" autoplay="" playsinline="" -webkit-playsinline="">
+
+							    <source src="./img/456.mp4" type='video/mp4'/>
+							    
+						  	</video>
+							
+						</div>
+									
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-card-header-right">
+										:موارد استفاده
+									</div>
+									<div class="f6-desription">
+										<br><b style='font-size:24px !important'>
+										فرودگاه ها، مترو، ترمینال های مسافربری 
+										</b><br>
+										<br>
+									</div>
+									<div class="f6-button" style='font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+
+						<div class="f6-offer-card f6-oc-3 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										شیبراه تجاری
+									</div><br>
+									<div class="f3-feedback-img">
+
+							<video loop="" muted="" autoplay="" playsinline="" -webkit-playsinline="">
+
+							    <source src="./img/456.mp4" type='video/mp4'/>
+							    
+						  	</video>
+							
+						</div>
+									
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-card-header-right">
+										:موارد استفاده
+									</div>
+									<div class="f6-desription">
+										<br><b style='font-size:24px !important'>
+										فرودگاه ها، هایپرمارکت، مراکز تجاری اداری 
+										</b><br>
+										<br>
+									</div>
+									<div class="f6-button" style='font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+					</div>
+						
+						<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class = "row h-100 pc hidden" id="floor-3">
+				<div class="col-12 col-sm-12 col-md-5 col-lg-5 f3-header">
+						<div class="header" style='text-align:center; font-size:28px !important'>
+							تولید با فناوری نوین 
+						</div>
+						<div class="f3-regular-text mt-5 mb-4" style='text-align:center; font-size:24px !important'>
+							<b>گروه صنعتی آسانسور و پله برقی بهران آسانبر، با به کار گیری ماشین آلات پیشرفته با بالاترین دقت، مطابق با تکنولوژی و دانش روز دنیا، با سرمایه گذاری مداوم و به کارگیری سیستم های رباتیک در خطوط تولید قطعات آسانسور و پله برقی، همواره در تلاش جهت یکپارچه سازی کیفیت محصولات تولیدی خود با فناوری روز دنیا می باشد و توانسته است سطح کیفی محصولات تولیدی خود را قابل رقابت با نمونه های مطرح اروپایی نماید. برای دیدن خطوط تولید گروه صنعتی آسانسور و پله برقی بهران می توانید به بخش کارخانه و تصاویر مراجعه فرمایید</b>
+						</div>
+						</div>
+
+					<div class="col-12 col-sm-12 col-md-5 col-lg-3 f3-feedback-img-div">
+					
+						<div class="f3-feedback-img">
+
+							<img class="img-100" src="./img/1-4-1-1.jpg" alt="Technology' ">
+						</div>
+						
+					</div>
+
+
+					<div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class = "row h-100 pc hidden" id="floor-4">
+				<div class="col-12 col-sm-12 col-md-5 col-lg-5 f3-header">
+						<div class="header" style='text-align:center; font-size:28px !important'>
+							خط تولید پیشرفته 
+						</div>
+						<div class="f3-regular-text mt-5 mb-4" style='text-align:center; font-size:24px !important'>
+							<b>استفاده از دستگاه های پیشرفته در خط تولید قطعات آسانسور و پله برقی گروه صنعتی بهران آسانبر، به کار گیری و آموزش نیروهای فنی و آموزش دیده در خطوط تولید، طراحی و کنترل مستمر تولید مطابق با استاندارد آسانسور و پله برقی و همچنین نظارت کامل افراد متخصص از زمان طراحی تا تولید قطعات، موجب شد این شرکت موفق به تولید قطعات آسانسور و پله برقی با کیفیتی قابل رقابت با نمونه های مشابه اروپایی گردد</b>
+						</div>
+						</div>
+
+					<div class="col-12 col-sm-12 col-md-5 col-lg-3 f3-feedback-img-div">
+						<div class="f3-feedback-img">
+
+							<img class="img-100" src="./img/1-4-1-2.jpg" alt="Factory' ">
+						</div>
+						
+					</div>
+
+
+					<div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+				
+
+				
+
+<div class = "row h-100 pc hidden" id="floor-5">
+				<div class="col-12 col-sm-12 col-md-5 col-lg-5 f3-header">
+						<div class="header" style='text-align:center; font-size:28px !important'>
+							ایمنی آسانسور و پله برقی 
+						</div>
+						<div class="f3-regular-text mt-5 mb-4" style='text-align:center; font-size:24px !important'><b>کلیه قطعات آسانسور و پله برقی تولید شده توسط گروه صنعتی آسانسور و پله برقی بهران آسانبر، با به کار گیری نیروهای متخصص، استفاده از به روز ترین تکنولوژی های دنیا و نیز مطابق با استانداردهای جهانی طراحی و تولید می گردند و این محصولات، پس از گذراندن آزمایشات متعدد در پیشرفته ترین آزمایشگاه های تخصصی آسانسور و پله برقی اروپا، موفق به اخذ گواهی نامه ها در زمینه آسانسور و پله برقی شده اند</b><br><br><b>اخذ این گواهی نامه ها به معنی تایید استاندارد فنی کالاهای بهران در سطح جهانی و تضمین امنیت مسافران می باشد</b>
+						</div>
+						</div>
+
+					<div class="col-12 col-sm-12 col-md-5 col-lg-3 f3-feedback-img-div">
+						<div class="f3-feedback-img">
+
+							<img class="img-100" src="./img/1.png" alt="Technology' ">
+						</div>
+						
+					</div>
+
+
+					<div class="col-2 col-sm-2 col-md-2 col-lg-2"></div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+
+				<div class = "row h-100 pc hidden" id="floor-6">
+
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-10 col-lg-11 header mt-6 mb-4" style='text-align:center; font-size:28px !important'> 
+						افتخارات بهران
+					</div>
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-1 col-sm-1 col-md-1 d-lg-none d-xl-none"></div>
+
+					<div class="col-12 col-sm-12 col-md-10 col-lg-9 f6-about" style='text-align:center; font-size:24px !important'> 
+						<b>گروه صنعتی آسانسور و پله برقی بهران آسانبر در راستای دستیابی به هدف نهایی خود که همانا تولید محصول با کیفیت و مطابق با استانداردهای روز دنیا می باشد و همچنین تضمین امنیت مصرف کنندگان محصولات بهران، با توکل بر خداوند و همت و تلاش شبانه روزی جوانان غیور ایرانی در مجموعه بهران، کنترل مستمر قطعات در آزمایشگاه بهران و نیز نظارت دقیق مدیریت مجموعه بر خطوط تولید، آزمایشگاه ها، سرویس و خدمات پس از فروش، این واحد صنفی موفق به کسب عناوین زیر گردید</b>   
+					</div>
+					<div class="col-2 col-sm-2 col-md-1 col-lg-2"></div>
+					<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+					<div class="col-12 col-sm-12 col-md-10 col-lg-9">
+						<div class="f6-offer-card f6-oc-1 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										واحد نمونه استاندارد
+									</div>
+									
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-desription">
+										<br>
+										<div class="f6-desription f6-desription-left">
+										<br>
+										<b style='text-align:center; font-size:18px !important'>
+											واحد نمونه استانی سازمان ملی استاندارد سال 1399  
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											 واحد نمونه کشوری سازمان ملی استاندارد ایران سال 1400 
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											 واحد نمونه استانی سازمان ملی استاندارد ایران سال 1401  
+										</b>
+									</div>
+										<br>
+										<br>
+									</div>
+									<div class="f6-button" style='text-align:center; font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+
+						<div class="f6-offer-card f6-oc-2 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										گواهی نامه های استاندارد آسانسور و پله برقی
+									</div>
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-desription">
+										<br>
+										<div class="f6-desription f6-desription-left">
+										<br>
+										<b style='text-align:center; font-size:18px !important'>
+											    (EN81) اخذ گواهی نامه استاندارد آسانسور 
+
+
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											 (EN115) اخذ گواهی نامه استاندارد پله برقی  
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											 (GOST) اخذ گواهی نامه استاندارد روسیه  
+										</b>
+									</div>
+										<br>
+										<br>
+									</div>
+									<div class="f6-button" style='text-align:center; font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+
+						<div class="f6-offer-card f6-oc-3 container">
+							<div class="row">
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 col-12 col-1 col-sm-12 col-md-12 col-lg-7 f6-oc-white">
+									<div class="f6-card-header-left" style='text-align:center'>
+										سایر گواهی های استاندارد
+									</div>
+								</div> 
+								<div class="col-12 col-1 col-sm-12 col-md-12 col-lg-5 f6-oc-green">
+									<div class="f6-desription">
+										<br>
+										<div class="f6-desription f6-desription-left">
+										<br>
+										<b style='text-align:center; font-size:18px !important'>
+											  <b style='text-align:center; font-size:18px !important'>  (ISO17025) </b> <br> اخذ گواهی استاندارد به عنوان آزمایشگاه مرجع از مرکز ملی تایید صلاحیت ایران
+
+
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											<b style='text-align:center; font-size:18px !important'> (CE) </b> <br> اخذ گواهی استاندارد اروپا برای انواع قفل، گاورنر، بافر، موتور گیربکس و موتور گیرلس   
+										</b><br><br>
+										<b style='text-align:center; font-size:18px !important'>
+											 <b style='text-align:center; font-size:18px !important'>(TUV intercert & MTIC intercert) </b> <br> اخذ گواهی استاندارد  
+										</b>
+									</div>
+										<br>
+										<br>
+									</div>
+									<div class="f6-button" style='text-align:center; font-size:24px !important'>
+										اطلاعات بیشتر
+									</div>
+								</div>
+							</div>
+						</div> 
+
+
+
+						<!-- Form Modals --> 
+						<div class="row">
+							<!-- The Modal -->
+							<div class="col-1 col-sm-1 col-md-1 col-lg-1"></div>
+							<div id="modal1" class="modal my-modal">
+
+							  <!-- Modal content -->
+							  	<div class="modal-content  col-12 col-sm-12 col-md-10 col-lg-9">
+								    <div class="modal-header">
+								      <span class="close">×</span>
+								    </div>
+							    
+									<div class="google-form">
+										<!--  Replace with google forms URL   -->
+										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSelQjG2HvB_CgNA5LNbEGL-vVSDuTB1IY6JUMIX9ixg9qN07g/viewform" frameborder="0" width="100%" height="" id="form1" onload="resizeIframe(this)"></iframe>
+										<div class="bottom-fade"></div>
+									</div>
+						  		</div>
+							</div>
+
+							<div id="modal2" class="modal my-modal">
+							  	<!-- Modal content -->
+							  	<div class="modal-content  col-12 col-sm-12 col-md-10 col-lg-9">
+								    <div class="modal-header">
+							      		<span class="close">×</span>
+								    </div>
+									    
+									<div class="google-form">
+										<!--  Replace with google forms URL   -->
+										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfv8vdU4ZpGpyV-fJ1Id3NZpqUklyOFRP3Pomj9QhoapdusjQ/viewform" frameborder="0" width="100%" height="" id="form1" onload="resizeIframe(this)"></iframe>
+										<div class="bottom-fade"></div>
+									</div>
+							  	</div>
+							</div>
+
+							<div id="modal3" class="modal my-modal">
+
+							  	<!-- Modal content -->
+							  	<div class="modal-content col-12 col-sm-12 col-md-10 col-lg-9">
+						   			<div class="modal-header">
+								      	<span class="close">×</span>
+								    </div>
+									    
+									<div class="google-form">
+										<!--  Replace with google forms URL   -->
+										<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScsy-PBLcHb7zEHEYf5zBMdlex18vKECwwBGvBZ6Ej9Wqxcww/viewform" frameborder="0" width="100%" height="" id="form1" onload="resizeIframe(this)"></iframe>
+										<div class="bottom-fade"></div>
+									</div>
+							  	</div>
+
+							</div>
+						</div>
+
+					</div>
+
+					<div class="pc my-auto d-none d-sm-none d-md-none d-lg-block d-xl-block">
+
+						<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+							<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+						</div>
+
+						<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+							<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+						</div>
+					</div>
+
+					<div class="mobile mobile-navigation mx-auto d-sm-block d-md-block d-lg-none d-xl-none">
+						<div class="mobile-nav-nested">
+							<div class="navigation-button nav-up" id = "nav-up" onclick="move_up();">
+								<img data-src="./img/arrow.webp" alt="" class="arrow-up img-100 lazyload" >
+							</div>
+
+							<div class="navigation-button nav-down disabled" id = "nav-down" onclick="move_down()" >
+								<img data-src="./img/arrow.webp" alt="" class="arrow-down img-100 lazyload" >
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+
+		<div class="filler" id="filler"> </div>
+
+		
+	</body>
+
+	<script>
+		let movedUp = false;
+let currentFloor = 0;
+let floorCountArr = [ "00", "0 1", "02", "03", "04", "05", "06", "RT"]
+
+
+window.move_up = function() {
+	console.log(currentFloor);
+
+	
+	$("html, body").animate({ scrollTop: 0 }, "fast");
+
+	prevFloor = currentFloor;
+	currentFloor++;
+
+	closeDoors();
+	
+	setTimeout(function() {
+		hidePrevFloor();
+		showCurrFloor();
+		adjustDoorsHeight(currentFloor);
+		if (currentFloor == 7){
+
+			var up = document.getElementsByClassName("nav-up");
+			var down = document.getElementsByClassName("nav-down");
+			var i;
+			for (i = 0; i < up.length; i++) {
+				up[i].classList.add("disabled");
+				down[i].classList.remove("disabled");
+			}
+			/*
+			$('#nav-up').addClass('disabled');
+			$('#nav-down').removeClass('disabled');
+			*/
+			$('#lamps-block').addClass('hidden');
+			$('#main-block').addClass('hidden');
+
+			movedUp = true;
+		}
+
+		else if (currentFloor != 7 && movedUp == true){
+			var up = document.getElementsByClassName("nav-up");
+			var i;
+			for (i = 0; i < up.length; i++) {
+				up[i].classList.remove("disabled");
+			}
+
+			/*$('#nav-up').removeClass('disabled');*/
+			$('#lamps-block').removeClass('hidden');
+			$('#main-block').removeClass('hidden');
+		}
+
+		console.log("Prev: " + prevFloor);
+		console.log("Cur: " + currentFloor);
+	}, 500);
+
+
+	setTimeout(function() {
+		changeFloorCounter();
+		openDoors();
+		adjustFiller();
+	}, 400);
+
+	if (currentFloor == 4){
+		setTimeout(function() {
+			var hide = document.getElementsByClassName("f4-hide");
+			var show = document.getElementsByClassName("f4-show");
+			var i;
+			for (i = 0; i < hide.length; i++) {
+				hide[i].classList.add("hidden");
+				show[i].classList.remove("hidden");
+			}
+			
+		}, 1000);
+	}
+
+	if (currentFloor == 5){
+		var hide = document.getElementsByClassName("f4-hide");
+		var show = document.getElementsByClassName("f4-show");
+		var i;
+		for (i = 0; i < hide.length; i++) {
+			hide[i].classList.remove("hidden");
+			show[i].classList.add("hidden");
+		}
+	}
+	
+}
+
+window.move_down = function() {
+	console.log(currentFloor);
+
+	$("html, body").animate({ scrollTop: 0 }, "fast");
+
+	prevFloor = currentFloor;
+	currentFloor--;
+
+	if (currentFloor == -1){
+		
+		$("#start-left-door").removeClass('start-left-door-moved');
+		$("#start-right-door").removeClass('start-right-door-moved');
+
+		setTimeout(function() {
+			$("#start-left-door").removeClass('hidden');
+			$("#start-right-door").removeClass('hidden');
+			$("#start-button-div").removeClass('hidden');
+			$("#start-button-div-mobile").removeClass('hidden');
+		}, 300);
+
+		changeFloorCounter();
+		hidePrevFloor();
+		return;
+	}
+	
+	closeDoors();
+	changeFloorCounter();
+
+
+	setTimeout(function() {
+		hidePrevFloor();
+		showCurrFloor();
+		adjustDoorsHeight(currentFloor);
+		if (currentFloor == 0){
+			/*$('#nav-down').addClass('disabled');*/
+			var down = document.getElementsByClassName("nav-down");
+			var i;
+			for (i = 0; i < down.length; i++) {
+				down[i].classList.add("disabled");
+			}
+
+		}
+		else if (currentFloor != 7 && movedUp == true){
+			var up = document.getElementsByClassName("nav-up");
+			var i;
+			for (i = 0; i < up.length; i++) {
+				up[i].classList.remove("disabled");
+			}
+
+			/*$('#nav-up').removeClass('disabled');*/
+
+			$('#lamps-block').removeClass('hidden');
+			$('#main-block').removeClass('hidden');
+		}
+
+		console.log("Prev: " + prevFloor);
+		console.log("Cur: " + currentFloor);
+	}, 500);
+
+	setTimeout(function() {
+		changeFloorCounter();
+		openDoors();
+	}, 400);
+
+	if (currentFloor == 4){
+		setTimeout(function() {
+			var hide = document.getElementsByClassName("f4-hide");
+			var show = document.getElementsByClassName("f4-show");
+			var i;
+			for (i = 0; i < hide.length; i++) {
+				hide[i].classList.add("hidden");
+				show[i].classList.remove("hidden");
+			}
+			document.getElementById("exhibitionist").src="./img/f4-man-open.png";
+		}, 1000);
+	}
+
+	if (currentFloor == 5){
+		var hide = document.getElementsByClassName("f4-hide");
+		var show = document.getElementsByClassName("f4-show");
+		var i;
+		for (i = 0; i < hide.length; i++) {
+			hide[i].classList.remove("hidden");
+			show[i].classList.add("hidden");
+		}
+	}
+
+
+}
+
+window.init_lift = function() {
+	console.log(currentFloor);
+
+	
+	$("html, body").animate({ scrollTop: 0 }, "fast");
+
+	prevFloor = currentFloor;
+	
+	
+	setTimeout(function() {
+		showCurrFloor();
+		
+		console.log("Prev: " + prevFloor);
+		console.log("Cur: " + currentFloor);
+	}, 500);
+
+
+	setTimeout(function() {
+		changeFloorCounter();
+		var delayInMilliseconds = 400; 
+		setTimeout(function() {
+			
+			adjustFiller();
+			$("#start-button-div").addClass('hidden');
+			$("#start-button-div-mobile").addClass('hidden');
+			$("#start-left-door").addClass('start-left-door-moved');
+			$("#start-right-door").addClass('start-right-door-moved');
+
+			setTimeout(function() {
+				$("#start-left-door").addClass('hidden');
+				$("#start-right-door").addClass('hidden');
+			}, 300);
+		}, delayInMilliseconds);
+	}, 400);
+}
+
+function changeFloorCounter(){
+	var element = document.querySelector("#floor-counter");
+	element.innerHTML  = floorCountArr[currentFloor];
+}	
+		
+
+
+function hidePrevFloor(){
+	$("#floor-" + prevFloor).addClass('hidden');
+}
+
+function showCurrFloor(){
+	$("#floor-" + currentFloor).removeClass('hidden');
+}
+
+function adjustDoorsHeight (floor) {
+	var doors = document.getElementsByClassName("door");
+	var i;
+	for (i = 0; i < doors.length; i++) {
+		var generalHeight = document.getElementById("floor-" + floor).scrollHeight;
+		generalHeight += document.getElementById("filler").scrollHeight;
+		generalHeight += document.getElementById("lamps-block").scrollHeight;
+		
+		var newHeight = "height: " +  generalHeight + "px!important;";
+		doors[i].setAttribute("style",newHeight);
+	}
+}
+
+function closeDoors() {
+
+	adjustFiller();
+	adjustDoorsHeight(prevFloor);
+
+	$("#left-door").addClass('display-block');
+	$("#right-door").addClass('display-block');
+
+	setTimeout(function() {
+		$("#left-door").addClass('left-door-moved');
+		$("#right-door").addClass('right-door-moved');
+	    
+	}, 100);
+}
+
+function openDoors() {
+	var delayInMilliseconds = 400; //1 second
+	setTimeout(function() {
+		$("#left-door").removeClass('left-door-moved');
+		$("#right-door").removeClass('right-door-moved');
+
+		setTimeout(function() {
+			$("#left-door").removeClass('display-block');
+			$("#right-door").removeClass('display-block');
+		}, 300);
+	}, delayInMilliseconds);
+}
+
+function open_description(moduleNumber) {
+
+	var moduleDesc = document.getElementById("desc-m" + moduleNumber);
+
+	if (moduleDesc.classList.contains('hidden')) {
+	    moduleDesc.classList.remove("hidden");
+	    $("#b-" + moduleNumber).addClass('f2-open-button-active');
+	}
+
+	else
+	{
+		moduleDesc.classList.add("hidden");
+		$("#b-" + moduleNumber).removeClass('f2-open-button-active');
+	}
+}
+
+function adjustFiller() {
+	var filler = document.getElementById("filler");
+	var mainBlock = document.getElementById("main-block");
+
+	
+
+	var winWidth = window.innerWidth;
+	if (currentFloor != 7){
+		var newHeightж
+		if (winWidth < 992){
+			newHeight = "height: 200px!important;";
+			filler.setAttribute("style",newHeight);
+		}
+		else{
+			newHeight = "height: calc(100vh - 160px - " + mainBlock.scrollHeight + "px)!important;";
+			/* filler.setAttribute("style",newHeight);*/
+			if (currentFloor == 1)
+				filler.setAttribute("style","height: 130px!important;");
+		}
+		console.log("newHeight: " + newHeight);
+	}
+	else {
+		filler.setAttribute("style","height: 0px;");
+	}
+}
+
+window.onload = function() {
+    /* var o;
+    $(".form-btn").click(function() {
+        o = $(this).data("src")
+    }), console.log(o), $("#leadForm").attr("src", o), $(".google-form iframe").load(function() {
+        $(this).replaceWith("<h2>Thank You!</h2><p>Please check your email to receive the link to download the file.</p>")
+    }) */
+
+    // Get the modal
+	var modal = document.getElementsByClassName('modal');
+
+	// Get the button that opens the modal
+	var btn = document.getElementsByClassName("f6-button");
+
+
+	// Get the <span> element that closes the modal
+	var span = document.getElementsByClassName("close");
+
+	// When the user clicks the button, open the modal 
+	btn[0].onclick = function() {
+	    modal[0].style.display = "block";
+	    
+	    $("#lamps-block").addClass('hidden');
+	    $("#body").addClass('modal-open');
+	}
+
+	btn[1].onclick = function() {
+	    modal[1].style.display = "block";
+	    $("#lamps-block").addClass('hidden');
+	    $("#body").addClass('modal-open');
+	}
+
+	btn[2].onclick = function() {
+	    modal[2].style.display = "block";
+	    $("#lamps-block").addClass('hidden');
+	    $("#body").addClass('modal-open');
+	}
+
+
+	// When the user clicks on <span> (x), close the modal
+	span[0].onclick = function() {
+	    modal[0].style.display = "none";
+	    $("#lamps-block").removeClass('hidden');
+	    $("#body").removeClass('modal-open');
+	}
+
+	span[1].onclick = function() {
+	    modal[1].style.display = "none";
+	    $("#lamps-block").removeClass('hidden');
+	    $("#body").removeClass('modal-open');
+	}
+
+	span[2].onclick = function() {
+	    modal[2].style.display = "none";
+	    $("#lamps-block").removeClass('hidden');
+	    $("#body").removeClass('modal-open');
+	}
+
+	// When the user clicks anywhere outside of the modal, close it
+	window.onclick = function(event) {
+	    if (event.target == modal) {
+	        modal.style.display = "none";
+	    	$("#lamps-block").removeClass('hidden');
+	    	$("#body").removeClass('modal-open');
+	    }
+	}
+};
+
+function resizeIframe(iframe) {
+	var newHeight = $(window).height();
+	iframe.height = newHeight +'px';
+}
+
+
+	</script>
+</HTML>
