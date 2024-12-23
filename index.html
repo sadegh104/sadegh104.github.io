@@ -22,18 +22,10 @@
 	</head>
 	<body onresize="adjustFiller()" id="body">
 		<audio id='welcome-sound' autoplay>
-			<source src="img/AUD-20241223-WA0017.mp3" type="audio/mpeg"> Your browser does not support the audio element
+			<source src="./img/AUD-20241223-WA0016.mp3" type="audio/mpeg"> Your browser does not support the audio element
 		</audio>
 
-		<script>
-			window.addEventListener('load', () => {
-            const audio = document.getElementById('welcome-sound');
-            // صدا را فعال می‌کنیم
-            audio.play().catch(error => {
-                console.error('Autoplay failed:', error);
-            });
-        });
-		</script>
+		
 		
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
@@ -66,7 +58,11 @@
 			<div class="start-button-div animate__animated animate__pulse animate__infinite	infinite animate__delay-2s" id = "start-button-div-mobile">
 				<div class="start-button" id = "start-button" onclick="init_lift();">
 					<img src="./img/behran.png" alt="Behran Logo" class="f0-logo-img" >
-				</div>	
+				</div>
+				<audio id="audio-file">
+					<source src="./img/AUD-20241223-WA0016.mp3" type="audio/mpeg">
+					مرورگر از پخش صدا پشتیبانی نمی کند
+				</audio>
 			</div>
 		</div>
 		
@@ -1222,6 +1218,20 @@ function resizeIframe(iframe) {
 	var newHeight = $(window).height();
 	iframe.height = newHeight +'px';
 }
+
+
+window.addEventListener('load', () => {
+	const audio = document.getElementById('welcome-sound');
+            // صدا را فعال می‌کنیم
+            audio.play().catch(error => {
+                console.error('Autoplay failed:', error);
+            });
+        });
+
+const button = document.getElementById('start-button');
+		const audio = document.getElementById('audio-file'
+            
+		
 
 
 	</script>
