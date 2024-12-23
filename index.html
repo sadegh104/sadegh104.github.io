@@ -26,12 +26,11 @@
 	        <source src="./img/AUD-20241223-WA0016.mp3" type="audio/mpeg">
 	        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
 	    </audio>
-	
-	    <!-- اسکریپت جاوااسکریپت -->
-	    
 
-		
-		
+	    <audio id="welcome-sound">
+	        <source src="./img/AUD-20241223-WA0017.mp3" type="audio/mpeg">
+	        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
+	    </audio>
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
 			<div class="floor-screen col-lg-2 col-md-4 col-4 col-sm-4 mx-auto">
@@ -835,6 +834,17 @@
 	</body>
 
 	<script>
+		const audio = document.getElementById('welcome-sound');
+        let played = false; // کنترل پخش تنها یک‌بار
+
+        // رویداد بارگذاری صفحه
+        window.addEventListener('load', () => {
+            if (!played) {
+                audio.play().catch(error => console.error('Error playing audio:', error));
+                played = true; // جلوگیری از پخش مجدد
+            }
+        });
+		
 		window.addEventListener('load', () => {
             const audio = document.getElementById('sound-file');
             // صدا را فعال می‌کنیم
