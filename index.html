@@ -27,10 +27,6 @@
 	        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
 	    </audio>
 
-	    <audio id="welcome-sound">
-	        <source src="./img/AUD-20241223-WA0017.mp3" type="audio/mpeg">
-	        مرورگر شما از پخش صدا پشتیبانی نمی‌کند.
-	    </audio>
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
 			<div class="floor-screen col-lg-2 col-md-4 col-4 col-sm-4 mx-auto">
@@ -835,17 +831,13 @@
 
 	<script>
 
-        // رویداد بارگذاری صفحه
-     //    window.addEventListener('load', () => {
-     //        const pageLoadAudio = document.getElementById('welcome-sound');
-	    // pageLoadAudio.play();
-     //    });
-
-        // رویداد کلیک دکمه
-        document.getElementById('start-button').addEventListener('click', () => {
-            const buttonClickAudio = document.getElementById('sound-file');
-	    buttonClickAudio.play();
+        رویداد بارگذاری صفحه
+        window.addEventListener('load', () => {
+            const pageLoadAudio = document.getElementById('welcome-sound');
+	    pageLoadAudio.play();
         });
+
+        
 		let movedUp = false;
 let currentFloor = 0;
 let floorCountArr = [ "00", "0 1", "02", "03", "04", "05", "06", "RT"]
