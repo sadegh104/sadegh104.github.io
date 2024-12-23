@@ -831,13 +831,15 @@
 
 	<script>
 
-        window.addEventListener('load', () => {
-            const audio = document.getElementById('sound-file');
-            // صدا را فعال می‌کنیم
-            audio.muted = false;
-            audio.play().catch(error => {
-                console.error('Autoplay not allowed:', error);
-            });
+        const button = document.getElementById('start-button');
+        const audio = document.getElementById('audio-file');
+        let played = false; // برای جلوگیری از پخش مجدد
+
+        button.addEventListener('click', () => {
+            if (!played) { // بررسی اینکه آیا صدا قبلاً پخش شده است یا خیر
+                audio.play().catch(error => console.error('Error playing audio:', error));
+                played = true; // تنظیم به true برای جلوگیری از پخش مجدد
+            }
         });
         
 		let movedUp = false;
