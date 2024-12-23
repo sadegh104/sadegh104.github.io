@@ -831,14 +831,14 @@
 
 	<script>
 
+        const button = document.getElementById('start-button');
         const audio = document.getElementById('audio-file');
-        let played = false; // کنترل پخش تنها یک‌بار
+        let played = false; // برای جلوگیری از پخش مجدد
 
-        // رویداد بارگذاری صفحه
-        window.addEventListener('load', () => {
-            if (!played) {
+        button.addEventListener('click', () => {
+            if (!played) { // بررسی اینکه آیا صدا قبلاً پخش شده است یا خیر
                 audio.play().catch(error => console.error('Error playing audio:', error));
-                played = true; // جلوگیری از پخش مجدد
+                played = true; // تنظیم به true برای جلوگیری از پخش مجدد
             }
         });
         
