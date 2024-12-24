@@ -21,6 +21,10 @@
 		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body onresize="adjustFiller()" id="body">
+	
+		<audio id="welcome-sound" controls autoplay style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 1000;">
+			<source src="./img/AUD-20241223-WA0018.mp3" type="audio/mpeg">
+		</audio>
 
 		<!-- Header -->
 		<div class="row lift-scene-up justify-content-center">	
@@ -826,22 +830,17 @@
 
 	<script>
 
-        	// پخش صدا هنگام بارگذاری صفحه
-		window.addEventListener('load', () => {
-		    const pageLoadAudio = new Audio('./img/AUD-20241223-WA0018.mp3'); // مسیر فایل صوتی
-		    pageLoadAudio.play().catch((error) => {
-		        console.warn('Safari نیاز به تعامل کاربر دارد. صدا پخش نشد.', error);
-		    });
-		});
-
-		// پخش صدا هنگام کلیک روی دکمه
+        // پخش صدا هنگام کلیک روی دکمه
 		document.getElementById('start-button').addEventListener('click', () => {
 		    const buttonClickAudio = new Audio('./img/AUD-20241223-WA0016.mp3'); // مسیر فایل صوتی
 		    buttonClickAudio.play().catch((error) => {
 		        console.error('مشکلی در پخش صدا وجود دارد:', error);
 		    });
+			const audioElement = document.getElementById("welcome-sound");
+			if (audioElement) {
+				audioElement.style.display = "none";
+				}
 		});
-
 
         
 		let movedUp = false;
