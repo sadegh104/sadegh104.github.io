@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", function () {
 		themeCircle.style.backgroundColor = themes[selectedTheme].color;
 	// تنظیم شفافیت برای سایر المان ها
 		
-		const elements = document.querySelectorAll('div, h1, h2, h3, h4, h5, h6, select, img, source');
+		const elements = document.querySelectorAll('div, h1, h2, h3, h4, h5, h6, select, img, source, audio, video, source');
 		elements.forEach(element => {
 			element.style.backgroundColor = "rgba(255, 255, 255, 0.06)";
 			element.style.borderRadius = '5px';
