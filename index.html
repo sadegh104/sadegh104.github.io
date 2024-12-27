@@ -10,20 +10,22 @@
 	    
 	    <meta name="twitter:image" content="./img/preview.webp">
 	    <meta property="og:image" content="./img/preview.webp">
-	    <meta property="og:title" content="Sellift - Lifting up your business">
+	    <meta property="og:title" content="Behran - Lifting up your business">
 
 		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
 
 		<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+		
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.2/lazysizes.min.js" integrity="sha512-TmDwFLhg3UA4ZG0Eb4MIyT1O1Mb+Oww5kFG0uHqXsdbyZz9DcvYQhKpGgNkamAI6h2lGGZq2X8ftOJvF/XjTUg==" crossorigin="anonymous"></script>
 
 		<link rel="stylesheet" href="./css/styles.css">
 	</head>
 	<body onresize="adjustFiller()" id="body">
+		<script src="theme-changer.js"></script>
 	
-		<audio id="welcome-sound" controls autoplay style="position: fixed; bottom: 10px; left: 50%; transform: translateX(-50%); z-index: 1000;">
-			<source src="./img/AUD-20241223-WA0018.mp3" type="audio/mpeg">
+		<audio id="welcome-sound" controls autoplay style="width: 200px; height: 200px; position: fixed; bottom: 10px; left: 25%; transform: translateX(-50%); z-index: 1000;">
+			<source src="./img/welcome-sound.mp3" type="audio/mpeg">
 		</audio>
 
 		<!-- Header -->
@@ -831,17 +833,14 @@
 	<script>
 
         // پخش صدا هنگام کلیک روی دکمه
-		document.getElementById('start-button').addEventListener('click', () => {
-		    const buttonClickAudio = new Audio('./img/AUD-20241223-WA0016.mp3'); // مسیر فایل صوتی
-		    buttonClickAudio.play().catch((error) => {
-		        console.error('مشکلی در پخش صدا وجود دارد:', error);
-		    });
-		    const audioElement = document.getElementById("welcome-sound");
-		    if (audioElement) {
-				audioElement.style.display = "none";
+		document.getElementById('start-button').addEventListener('load', () => {
+			
+			const audioElement = document.getElementById("welcome-sound");
+			if (audioElement) {
+				audioElement.style.display = 'none';
 				}
-		});
-
+			
+		});	
         
 		let movedUp = false;
 let currentFloor = 0;
